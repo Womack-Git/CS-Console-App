@@ -7,13 +7,13 @@ class MainClass {
       Console.WriteLine("\n\nWhich option would you like to select?\n1.) You enter yourname then the computer greets you!\n2.) You enter dimensions of a rectangle and thecomputer tells you the area.\n3.) The computer asks you for a distance you havedriven and the amount of gas you have consumed and the computer tells you your milesper gallon.\n4.) Enter a word or words and the computer will check if they are in acitation from 'Alice in Wonderland'\n5.) Quit");
       answer = Console.ReadLine();
       switch(answer){
-        case "1": Console.Write("Hello, " + Menu.nameOption() + "! I hope you are having a good day!");
+        case "1": Console.Write("Hello, " + Menu.NameOption() + "! I hope you are having a good day!");
         break;
-        case "2": Console.Write("The area of your rectangle is " + Menu.rectangleOption());
+        case "2": Console.Write("The area of your rectangle is " + Menu.RectangleOption());
         break;
-        case "3": Console.Write("The MPG of your trip: " + Menu.mpgOption() + " miles per gallon");
+        case "3": Console.Write("The MPG of your trip: " + Menu.MpgOption() + " miles per gallon");
         break;
-        case "4": Console.Write(Menu.aliceOption());
+        case "4": Console.Write(Menu.AliceOption());
         break;
         case "5":
         break;
@@ -27,31 +27,31 @@ class MainClass {
 
 class Menu {
 
-  public static string nameOption(){
+  public static string NameOption(){
     Console.Write("Enter your name: ");
-    string Name = Console.ReadLine();
-    return Name;
+    string name = Console.ReadLine();
+    return name;
   }
 
-  public static double rectangleOption(){
+  public static double RectangleOption(){
     Console.Write("Enter the width of the rectangle: ");
-    double Width = Convert.ToDouble(Console.ReadLine());
+    double width = Convert.ToDouble(Console.ReadLine());
     Console.Write("Enter the length of the rectangle: ");
-    double Length = Convert.ToDouble(Console.ReadLine());
-    double Area = Width*Length;
-    return Area;
+    double length = Convert.ToDouble(Console.ReadLine());
+    double area = width*length;
+    return area;
   }
 
-  public static double mpgOption(){
+  public static double MpgOption(){
     Console.Write("Enter the distance you traveled on your trip (only the number please): ");
-    double Distance = Convert.ToDouble(Console.ReadLine());
+    double distance = Convert.ToDouble(Console.ReadLine());
     Console.Write("Enter the amount of gas you burned (in gallons): ");
-    double Gallons = Convert.ToDouble(Console.ReadLine());
-    double MilesPerGallon = Distance/Gallons;
-    return MilesPerGallon;
+    double gallons = Convert.ToDouble(Console.ReadLine());
+    double milesPerGallon = distance/gallons;
+    return milesPerGallon;
   }
 
-  public static string aliceOption(){
+  public static string AliceOption(){
     string story = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
     Console.Write("What word(s) would you like to look for? ");
     string wordGuess = Console.ReadLine();
