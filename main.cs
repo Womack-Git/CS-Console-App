@@ -11,6 +11,8 @@ class MainClass {
         break;
         case "2": Console.Write("The area of your rectangle is " + Menu.rectangleOption());
         break;
+        case "3": Console.Write("The MPG of your trip: " + Menu.mpgOption() + " miles per gallon");
+        break;
         default: Console.WriteLine("\nSubmission not processed.");
         break;
       }
@@ -34,5 +36,18 @@ class Menu {
     double Length = Convert.ToDouble(Console.ReadLine());
     double Area = Width*Length;
     return Area;
+  }
+
+  public static double mpgOption(){
+    Console.Write("Enter the distance you traveled on your trip (only the number please): ");
+    double Distance = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Enter the amount of gas you burned (in gallons): ");
+    double Gallons = Convert.ToDouble(Console.ReadLine());
+    double MilesPerGallon = Distance/Gallons;
+    return MilesPerGallon;
+  }
+
+  public static double aliceOption(){
+    
   }
 }
