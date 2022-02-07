@@ -19,5 +19,20 @@ class MainClass {
   }
 }
 
+class Menu {
 
+  public static string nameOption(){
+    Console.Write("Enter your name: ");
+    string Name = Console.ReadLine();
+    return Name;
+  }
+
+  public static double rectangleOption(){
+    Console.Write("Enter the width of the rectangle: ");
+    double Width = Convert.ToDouble(Console.ReadLine());
+    Console.Write("Enter the length of the rectangle: ");
+    double Length = Convert.ToDouble(Console.ReadLine());
+    double Area = Width*Length;
+    return Area;
+  }
 }
